@@ -1,8 +1,8 @@
 # snakeGame
-In this project I'm trying my best to create a simple computer game, namely "the snake".
+In this project I'm (following a tutorial) trying my best to recreate an old mobilephone game, namely "the snake". This project uses the **p5.js** framework.
 
 
-Note: Keep the project file structure
+**Note**: Keep the project file structure
 
 
 
