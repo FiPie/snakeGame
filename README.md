@@ -7,3 +7,6 @@ In this project I'm (following a tutorial) trying my best to recreate an old mob
 
 
 You can preview this project [here](https://fipie.github.io/snakeGame/) (when it's ready of course;)
+
+![screenShot](/images/01.png)
+Format: ![snakePrtSc](/images/01.png)
