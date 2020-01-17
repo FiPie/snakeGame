@@ -1,7 +1,9 @@
+// This code is a result of Daniel Schiffman's tutorial, he's a great explainer!
+
 var s; // snake object
 var scl = 20; // the scale of our snake
 var food;
-//Initial Setup
+//Initial Setup, this function fires once at the begining in p5.js framwork and executes whatever code is inside the block
 function setup() {
   createCanvas(600, 600);
   s = new Snake();
@@ -15,7 +17,7 @@ function pickLocation() {
   food = createVector(floor(random(cols)), floor(random(rows)));
   food.mult(scl);
 }
-
+// in p5.js this function is called in loop
 function draw() {
   background(51);
   s.death();
