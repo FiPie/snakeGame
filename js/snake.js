@@ -1,3 +1,4 @@
+// Snake object
 function Snake() {
   // some starting parameters
   this.x = 0;
@@ -7,6 +8,7 @@ function Snake() {
   this.total = 0;
   this.tail = [];
 
+  // snake hungry, snake eats. Detects if the head of our snake is in the same position as the food chunk
   this.eat = function(pos) {
     var d = dist(this.x, this.y, pos.x, pos.y);
     if (d < 1) {
@@ -23,6 +25,7 @@ function Snake() {
     this.yspeed = y;
   }
 
+  // detects whatever the snake's head collide with it's tail
   this.death = function() {
     for (var i = 0; i < this.tail.length; i++) {
       var pos = this.tail[i];
@@ -35,15 +38,17 @@ function Snake() {
     }
   }
 
-  // snake position refreshing function
+  // updates the snake's state
   this.update = function() {
     if (this.total === this.tail.length) {
       for (var i = 0; i < this.tail.length - 1; i++) {
+        // we're moving the last elem in the array into prev index
         this.tail[i] = this.tail[i + 1];
       }
     }
     this.tail[this.total - 1] = createVector(this.x, this.y);
 
+    // snake position update function
     this.x = this.x + this.xspeed * scl;
     this.y = this.y + this.yspeed * scl;
 
@@ -61,6 +66,5 @@ function Snake() {
     }
 
     rect(this.x, this.y, scl, scl);
-
   }
 }
